@@ -6,6 +6,8 @@ import Login from './screens/Login'
 import Patients from './screens/Patients'
 import Dashboard from './screens/Dashboard'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Notfound from './screens/Notfound';
+import Register from './screens/Register';
 function App() {
   return (
     <Router>
@@ -16,6 +18,8 @@ function App() {
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/tests' element={<Tests/>}/>
         <Route exact path='/patients' element={<Patients/>}/>
+        <Route exact path='/register' element={<Register/>}/>
+        <Route exact path='*' element={<Notfound/>}/>
       </Routes>
     </div>
     </Router>

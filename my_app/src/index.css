@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.form{
+  margin-top: 30px ;
+  margin-left: 15px;
+}
+.form > input{
+  position: relative;
+  width: 70%;
+}
+.form .link-info{
+  
+  margin-left: 15px;
+
+}
+
+.register > form{
+  margin-top: 15px;
+}
+.register .btn{
+  margin-top: 15px;
+  margin-left: 15px;
+}
