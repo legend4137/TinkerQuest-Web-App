@@ -2,9 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'; 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-danger" >
   <div className="container-fluid">
-    <Link className="navbar-brand fs-4 " to="/">RedCliffe Labs</Link>
+    <Link className="navbar-brand fs-4 fs-italic" to="/">RedCliffe Labs</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -24,6 +24,12 @@ export default function Navbar() {
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/login" >login</Link>
+        </li>
+        <li className="nav-item">
+                 <input class="form-control mr-sm-2 bg-light" style={{color: "black"}}  type="search" placeholder="Search" aria-label="Search"/>
+                </li>
+        <li className='nav-item'>
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
         </li>
 
       </ul>
