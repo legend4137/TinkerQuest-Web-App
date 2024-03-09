@@ -1,10 +1,18 @@
 import React from 'react'
 import {Link} from 'react-router-dom'; 
+import Typewriter from 'typewriter-effect';
+
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-danger" >
   <div className="container-fluid">
-    <Link className="navbar-brand fs-4 fs-italic" to="/">RedCliffe Labs</Link>
+    <Link className="navbar-brand fs-4 fs-italic" to="/"><Typewriter
+  options={{
+    strings: ['RedCliffe Labs', 'RedCliffe Labs'],
+    autoStart: true,
+    loop: true,
+  }}
+/></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

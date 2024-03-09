@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Carousal from '../components/Carousal'
 import { Link, useNavigate } from "react-router-dom";
-
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
   return (
@@ -13,7 +13,15 @@ export default function Home() {
         <section class="py-5 text-center container">
           <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-              <h1 class="display-4 fw-bold lh-1 text-body-emphasis">RedCliffe Labs</h1>
+              <h1 class="display-4 fw-bold lh-1 text-body-emphasis"> Redcliffe Labs</h1>
+              <h3 class=" fw-bold text-body-emphasis"> <Typewriter
+  options={{
+    strings: ['Technology', 'Innovation','Health', 'Revolution','Science'],
+    autoStart: true,
+    loop: true,
+  }}
+/></h3>
+ 
               <p class="lead text-body-secondary">Establishing an inventory management forecasting which helps in maintaining the right inventory in all labs, and predict the need, that can be arranged in advance and accurately. </p>
               {/* <p>
                 <a href="#" class="btn btn-primary my-2">Main call to action</a>
@@ -89,6 +97,11 @@ export default function Home() {
             
           </div>
         </div>
+
+
+        
+
+
         
         <Footer/>
     </div>
