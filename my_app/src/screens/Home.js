@@ -4,25 +4,40 @@ import Footer from '../components/Footer'
 import Carousal from '../components/Carousal'
 import { Link, useNavigate } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 export default function Home() {
+  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+  const FadeUp = batch(Fade(), Move(), Sticky());
   return (
     <div>
         <Navbar/>
         <Carousal/>
-        <section class="py-5 text-center container">
-          <div class="row py-lg-5">
-            <div class="col-lg-6 col-md-8 mx-auto">
-              <h1 class="display-4 fw-bold lh-1 text-body-emphasis"> Redcliffe Labs</h1>
-              <h3 class=" fw-bold text-body-emphasis"> <Typewriter
+        <ScrollContainer>
+  <ScrollPage>
+    <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+    <h1 class="display-4 fw-bold lh-1 text-body-emphasis" style={{color: 'red'}}> Redcliffe Labs</h1>
+    <h1 class=" fw-bold text-body-emphasis" style={{color: 'red'}}> <Typewriter
   options={{
     strings: ['Technology', 'Innovation','Health', 'Revolution','Science'],
     autoStart: true,
     loop: true,
   }}
-/></h3>
- 
-              <p class="lead text-body-secondary">Establishing an inventory management forecasting which helps in maintaining the right inventory in all labs, and predict the need, that can be arranged in advance and accurately. </p>
+/></h1>
+    </Animator>
+  </ScrollPage>
+  <ScrollPage>
+    <Animator animation={ZoomInScrollOut}>
+
+    </Animator>
+  </ScrollPage>
+  <ScrollPage>
+    <Animator animation={FadeUp}>
+    <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="display-5 fw-bold lh-1 text-body-emphasis"> Who Are We? </h1>
+              <p class="lead text-body-secondary display-8">Establishing an inventory management forecasting which helps in maintaining the right inventory in all labs, and predict the need, that can be arranged in advance and accurately. </p>
               {/* <p>
                 <a href="#" class="btn btn-primary my-2">Main call to action</a>
                 <a href="#" class="btn btn-secondary my-2">Secondary action</a>
@@ -30,6 +45,10 @@ export default function Home() {
             </div>
           </div>
           </section>
+    </Animator>
+  </ScrollPage>
+</ScrollContainer>
+
 
         <div class="container my-5">
           <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
