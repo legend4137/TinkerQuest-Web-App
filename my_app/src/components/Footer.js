@@ -3,7 +3,12 @@ import {Link} from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <div className="container">
+    
+    <div className="container footer">
+
+<div style={{ marginTop: '180px' }}> {/* Add margin top to avoid overlap */}
+      {/* Your content goes here */}
+    </div>
       <footer className="py-3 my-4">
         <ul className="nav justify-content-center border-bottom pb-3 mb-3">
           <li className="nav-item"><Link className="nav-link active" aria-current="page" to="/">Home</Link></li>

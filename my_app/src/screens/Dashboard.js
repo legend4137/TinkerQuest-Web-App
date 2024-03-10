@@ -6,9 +6,7 @@ export default function Dashboard() {
     <div>
     <Navbar/>
     <div>Dashboard</div>
-
-
-
+    
     </div>
 
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom';
-
+import Footer from '../components/Footer'
 
 export default function Login() {
   return (
@@ -24,6 +24,7 @@ export default function Login() {
   <button type="submit" className="btn btn-primary">Submit</button>
   <Link  className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" aria-current="page" to="/register">Register Now!</Link>
 </form>
+    <Footer />
     </div>
 
   );
