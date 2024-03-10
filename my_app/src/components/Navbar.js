@@ -4,7 +4,8 @@ import Typewriter from 'typewriter-effect';
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-danger" >
+    <div>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" >
   <div className="container-fluid">
     <Link className="navbar-brand fs-4 fs-italic" to="/"><Typewriter
   options={{
@@ -44,6 +45,10 @@ export default function Navbar() {
     </div>
   </div>
 </nav>
+      <div style={{ marginTop: '70px' }}> {/* Add margin top to avoid overlap */}
+      {/* Your content goes here */}
+    </div>
+    </div>
 
   )
 }

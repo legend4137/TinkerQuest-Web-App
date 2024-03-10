@@ -7,7 +7,7 @@ export default function
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <img src="https://source.unsplash.com/random/900x400/?technology" class="d-block w-100" alt="..."/>
+      <img src="https://source.unsplash.com/random/900x400/?black" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="https://source.unsplash.com/random/900x400/?communication" class="d-block w-100" alt="..."/>
